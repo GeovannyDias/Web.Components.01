@@ -146,3 +146,13 @@ ViewEncapsulation
 ## Enums - TypeScript
 
 * **https://www.typescriptlang.org/docs/handbook/enums.html**
+
+```
+enum VIDEO_PROVIDERS {
+  YOUTUBE = 'youtube',
+  VIMEO = 'vimeo',
+}
+
+this.provider === VIDEO_PROVIDERS.YOUTUBE
+
+```
