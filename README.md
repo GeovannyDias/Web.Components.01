@@ -168,7 +168,7 @@ readme.md
 angular.md
 react.md
 
-Construimos el componente:
+Construimos el componente y automáticamente se genera la documentación en los ficheros *.md:
 
 npm run build
 
