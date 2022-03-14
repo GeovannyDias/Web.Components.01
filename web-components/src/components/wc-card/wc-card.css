@@ -1,0 +1,45 @@
+/* :host {
+  display: block;
+} */
+
+.b-card-box {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+  border-radius: 1rem;
+}
+
+.b-card {
+  background-color: #ffffff;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  color: #555555;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.b-card__content {
+  padding: 1.5rem;
+}
+
+.b-card__full-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.b-card__photo-container {
+}
+
+.b-card__photo {
+  border-radius: 50%;
+  border: 6px solid #e6e6ef;
+}
+
+.b-card__resume {
+  color: #aaaaaa;
+}
+
+h3 {
+  color: #282896;
+}
