@@ -20,6 +20,10 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface PichinchaButtonTest {
+        "text": string;
+        "type": 'primary' | 'secondary';
+    }
     interface WcCard {
         "fullName": string;
         "photoUser": string;
@@ -38,6 +42,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLPichinchaButtonTestElement extends Components.PichinchaButtonTest, HTMLStencilElement {
+    }
+    var HTMLPichinchaButtonTestElement: {
+        prototype: HTMLPichinchaButtonTestElement;
+        new (): HTMLPichinchaButtonTestElement;
+    };
     interface HTMLWcCardElement extends Components.WcCard, HTMLStencilElement {
     }
     var HTMLWcCardElement: {
@@ -52,6 +62,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "pichincha-button-test": HTMLPichinchaButtonTestElement;
         "wc-card": HTMLWcCardElement;
         "wc-video-player": HTMLWcVideoPlayerElement;
     }
@@ -71,6 +82,11 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface PichinchaButtonTest {
+        "onIClick"?: (event: CustomEvent<any>) => void;
+        "text"?: string;
+        "type"?: 'primary' | 'secondary';
+    }
     interface WcCard {
         "fullName"?: string;
         "photoUser"?: string;
@@ -83,6 +99,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "pichincha-button-test": PichinchaButtonTest;
         "wc-card": WcCard;
         "wc-video-player": WcVideoPlayer;
     }
@@ -92,6 +109,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "pichincha-button-test": LocalJSX.PichinchaButtonTest & JSXBase.HTMLAttributes<HTMLPichinchaButtonTestElement>;
             "wc-card": LocalJSX.WcCard & JSXBase.HTMLAttributes<HTMLWcCardElement>;
             "wc-video-player": LocalJSX.WcVideoPlayer & JSXBase.HTMLAttributes<HTMLWcVideoPlayerElement>;
         }

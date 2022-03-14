@@ -1,0 +1,15 @@
+.button-test {
+  border: 0px;
+  border-radius: 4px;
+  height: 40px;
+
+  &.button-test-primary {
+    background-color: var(--color-yellow);
+    color: var(--color-blue);
+  }
+
+  &.button-test-secondary {
+    background-color: var(--color-gray);
+    color: var(--color-blue);
+  }
+}

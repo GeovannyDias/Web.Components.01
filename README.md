@@ -156,3 +156,65 @@ enum VIDEO_PROVIDERS {
 this.provider === VIDEO_PROVIDERS.YOUTUBE
 
 ```
+
+## DS WEB PCHNCH
+
+```
+npm run generate atoms/pichincha-button
+
+Stencil construye automáticamente la documentación, creamos en el componente los ficheros:
+
+readme.md
+angular.md
+react.md
+
+Construimos el componente:
+
+npm run build
+
+
+```
+
+## ERROR
+
+```
+[ ERROR ]  Rollup: Missing Export: ./src/index.ts:1:9
+           'Components' is not exported by ./src/components.d.ts, imported by ./src/index.ts
+
+      L1:  export { Components, JSX } from './components';
+
+[38:03.5]  build failed in 97 ms
+
+
+
+Solve "@stencil/core": "^2.13.0":
+
+In file index.ts first import the components, then export them.
+
+import { Components, JSX } from "./components";
+export { Components, JSX };
+
+// export { Components, JSX } from './components'; → Eliminar del fichero
+
+
+```
+
+## History Book
+
+* **https://dev.to/raguilera82/empezando-con-stenciljs-35f4**
+
+```
+En primer lugar integrar el CLI de Storybook en el proyecto para eso dentro de la raíz del proyecto ejecutamos:
+
+npx -p @storybook/cli sb init --type html 
+
+Posteriormente instalamos las dependencias de los addons que vayamos a utilizar de Storybook:
+
+npm install --save-dev @storybook/addon-notes @storybook/addon-knobs
+
+
+npm run storybook
+
+```
+
+
