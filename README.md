@@ -226,3 +226,13 @@ npm install @stencil/sass --save-dev
 
 ```
 
+## CSS - Global
+
+
+```
+Add path css in folder www:
+
+<!-- CSS FOLDER → www/build/web-components.css -->
+<link rel="stylesheet" href="/build/web-components.css">
+
+```
