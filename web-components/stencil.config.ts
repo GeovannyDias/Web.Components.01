@@ -3,6 +3,7 @@ import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'web-components',
+  globalStyle: 'src/global/variables.css',
   plugins: [
     sass()
   ],
@@ -22,5 +23,4 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
-  globalStyle: 'src/global/variables.css',
 };
